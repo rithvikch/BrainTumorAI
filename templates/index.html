@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "{{ url_for('static', filename = 'index.css')}}">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"style="background-color: #e3f2fd;>
+        <a class="navbar-brand" href="#">B.T.C.A</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#demo">Demo</a>
+            
+          </div>
+        </div>
+      </nav>
+    <h1 class = "facts"><b>Brain Tumor Classification App</b></h1>
+    <image class = "ima" src = "{{ url_for('static', filename = 'images/bigbrain.png')}}"></image>
+    <div class = "stuff">
+    {%for x in content%}
+        <br>    
+        <h2 style=" float: left; width: 100%; font-family: 'Nunito', sans-serif; color: white; font-size: 1.5em; text-shadow: 0 0 10px currentColor; margin-right: 5%;">{{x}}</h2>
+        {%for i in range(3)%}
+            <br>
+        {% endfor %}
+    {% endfor %}
+    
+</div>
+{%for i in range(3)%}
+            <br>
+    {% endfor %}s
+
+    <div class = "instructions">
+        <h1 class = "instra">Instructions</h1>
+        
+        <p class = "ins">Please upload your brain MRI scan below to find out if you have have a brain tumor, and if so, what type of tumor. By combining out python flask framework and our machine learning algorithm, we are able to provide you an accurate diagnosis. Typically, it takes up to 48 hours for a MRI scan to be diagnosed by a medical professional, but with our website, diagnosis is at your fingertips.  </p>
+    </div>
+
+
+
+
+    <div id = "demo">
+    <h1 class = "factss"><b>Demo</b></h1>
+
+
+    {%for i in range(3)%}
+            <br>
+    {% endfor %}
+    <div class="mb-3" style="margin-left: 5%; ">
+      <form action="#" method = "post">
+        <input type="file" name = "nm" class="form-control" value = "submit" aria-label="file example" style="width: 25%; margin: auto; margin-right: 65%;">
+    </form>  
+        <div class="invalid-feedback">Example invalid form file feedback</div>
+      </div>
+    
+    </div>
+    
+
+    
+  
+  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+
+</body>
+</html>
